@@ -1,0 +1,121 @@
+/* src/components/UpgradeCard.css */
+
+.upgrade-card {
+  background-color: #182122;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 50vw;
+  height: 20vh;
+  transition: all 0.3s ease; /* Smooth transitions for resizing */
+}
+
+.upgrade-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.upgrade-content p {
+  color: #ffffff;
+}
+
+.upgrade-h2-2 {
+  margin-top: -10px;
+}
+
+.premium-text {
+  color: #a4df65;
+}
+
+.upgrade-content p {
+  margin-top: -15px;
+}
+
+.upgrade-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.upgrade-button:hover {
+  background-color: #a4df65; /* Change button color on hover */
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .upgrade-card {
+    width: 60vw; /* Increase width on medium screens */
+    height: auto;
+  }
+
+  .upgrade-button {
+    padding: 8px 16px;
+    height: 45px;
+  }
+
+  .upgrade-h2-2 {
+    font-size: 18px;
+  }
+
+  .upgrade-content {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .upgrade-card {
+    width: 70vw; /* Further reduce width on tablets */
+    padding: 15px;
+    height: auto;
+  }
+
+  .upgrade-content h2 {
+    font-size: 20px;
+  }
+
+  .upgrade-button {
+    width: 100%; /* Make button take full width */
+    text-align: center;
+  }
+
+  .upgrade-h2-2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upgrade-card {
+    width: 85vw; /* Reduce width for mobile screens */
+    padding: 10px;
+    height: auto;
+  }
+
+  .upgrade-content h2 {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .upgrade-h2-2 {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .upgrade-button {
+    width: 100%;
+    padding: 8px;
+    height: 40px;
+  }
+
+  .upgrade-content {
+    margin-left: 10px;
+  }
+}

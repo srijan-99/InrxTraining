@@ -1,0 +1,131 @@
+/* src/components/BalanceCard.css */
+
+.balance-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  height: 31vh;
+  width: 27vh;
+  transition: all 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.balance-info {
+  text-align: left;
+}
+
+.growth {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 12px;
+  width: 80px;
+  padding-left: 12px;
+  border-radius: 10px;
+  background-color: #CCF888;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .balance-card {
+    width: 35vh; /* Increase width for medium-sized screens */
+    height: auto;
+    padding: 15px;
+  }
+
+  .growth {
+    font-size: 13px; /* Adjust font size */
+  }
+
+  .balance-info h2 {
+    font-size: 22px; /* Adjust balance font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .balance-card {
+    width: 40vh; /* Increase width for tablets */
+    padding: 15px;
+  }
+
+  .balance-info h2 {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .balance-info h3 {
+    font-size: 16px; /* Reduce subtitle font size */
+  }
+
+  .growth {
+    font-size: 12px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .balance-card {
+    width: 80vw; /* Full width on mobile */
+    padding: 10px;
+    height: auto;
+    margin-top: 150px;
+  }
+
+  .profile-info {
+    flex-direction: row; /* Display profile info in a row on smaller screens */
+    justify-content: space-between;
+    align-items: center; /* Center align items in the row */
+    width: 100%;
+  }
+
+  .balance-info {
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .balance-info h2 {
+    font-size: 18px; /* Reduce balance font size */
+  }
+
+  .balance-info h3 {
+    font-size: 14px;
+  }
+
+  .growth {
+    font-size: 10px;
+    width: 60px;
+  }
+}
+
+/* Additional Responsive Adjustments */
+@media (max-width: 360px) {
+  .balance-card {
+    width: 90vw; /* Slightly increase the width for very small screens */
+  }
+
+  .growth {
+    font-size: 9px; /* Further reduce font size for small screens */
+    padding-left: 8px; /* Adjust padding */
+  }
+
+  .balance-info h2 {
+    font-size: 16px; /* Smaller balance font size for mobile */
+  }
+
+  .balance-info h3 {
+    font-size: 12px; /* Smaller subtitle font size for mobile */
+  }
+}

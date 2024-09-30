@@ -1,0 +1,162 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  color: #000;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Main heading styles */
+.navbar h1 {
+  align-items: center;
+  margin-right: 50px;
+  font-size: 24px;
+}
+
+/* Username styling */
+.username {
+  font-weight: bolder;
+  -webkit-text-stroke: 1px black;
+}
+
+/* Right section of the navbar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 60px;
+  width: 45vw;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+/* Search box styles */
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: white;
+  height: 40px;
+  justify-content: space-between;
+}
+
+/* Search box inner container */
+.search-box_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-box_1 p {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.search {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+
+.group {
+  justify-content: flex-end;
+}
+
+/* Notification and profile picture */
+.notification {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .navbar h1 {
+    font-size: 20px;
+    margin-right: 30px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+    width: 50vw;
+    margin-left: 20px;
+  }
+
+  .search-box {
+    width: 18vw;
+  }
+
+  .notification, .profile-pic, .dot {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-around;
+    margin-left: 0;
+  }
+
+  .search-box {
+    width: 40vw;
+  }
+
+  .notification, .profile-pic, .dot {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 70vw;
+    padding: 6px 10px;
+  }
+
+  .notification, .profile-pic, .dot {
+    height: 20px;
+    width: 20px;
+  }
+}

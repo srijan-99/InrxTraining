@@ -1,0 +1,125 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, width 0.3s ease; /* Smooth transition for background and width */
+}
+
+/* Light Mode Styles */
+.sidebar.light {
+  background-color: #e9f0e5; /* Light mode background color */
+  color: #000; /* Light mode text color */
+}
+
+/* Dark Mode Styles */
+.sidebar.dark {
+  background-color: #333; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+}
+
+/* Sidebar Options and Bottom */
+.sidebar-options,
+.sidebar-bottom ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* Sidebar Options and Bottom Items */
+.sidebar-options li,
+.sidebar-bottom li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* Links in Sidebar Options and Bottom */
+.sidebar-options li a,
+.sidebar-bottom li a {
+  text-decoration: none;
+  font-family: var(--global-font);
+  font-weight: 600;
+  font-size: 16px;
+  color: inherit; /* Inherit color from sidebar */
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 200px; /* Reduce sidebar width for smaller screens */
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  /* Adjust font size for smaller screens */
+  .sidebar-options li a,
+  .sidebar-bottom li a {
+    font-size: 14px;
+  }
+
+  /* Adjust padding for smaller screens */
+  .sidebar-options li,
+  .sidebar-bottom li {
+    padding: 8px 16px;
+  }
+
+  /* Make sidebar icons smaller on mobile */
+  .sidebar-options li img,
+  .sidebar-bottom li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 180px; /* Further reduce width for very small screens */
+  }
+
+  .sidebar-options li a,
+  .sidebar-bottom li a {
+    font-size: 12px;
+  }
+
+  .sidebar-options li,
+  .sidebar-bottom li {
+    padding: 6px 12px; /* Smaller padding for very small screens */
+  }
+}
